@@ -1,0 +1,172 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  scroll-behavior: smooth;
+  --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #ccc;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+
+.card {
+  backdrop-filter: blur(18px) saturate(136%);
+  -webkit-backdrop-filter: blur(18px) saturate(136%);
+  background-color: rgba(74, 74, 74, 0.57);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.boder {
+  border: 2px solid #ffff;
+}
+
+.black-border {
+  border: 2px solid #000;
+}
+
+.custom-loader {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side,#0000 40%,#000 41%);
+  background: linear-gradient(0deg ,#766DF480 50%,#766DF4FF 0) center/4px 100%,
+    linear-gradient(90deg,#766DF440 50%,#766DF4BF 0) center/100% 4px;
+  background-repeat: no-repeat;
+  animation: s3 1s infinite steps(12);
+}
+
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.custom-loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn)
+  }
+}
+
+.scroll {
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+.scroll::-webkit-scrollbar{
+  width: 10px;
+}
+
+.scroll::-webkit-scrollbar-track{
+  background: #ccc;
+  border-radius: 50px;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Loading animation styles */
+.loading {
+  position: relative;
+}
+
+.custom-loader {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Additional styles for the button */
+#sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sendButton.loading {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
