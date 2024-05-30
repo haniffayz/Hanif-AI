@@ -28,12 +28,12 @@ function App() {
         <div className="flex flex-col w-full max-w-3xl 2xl:max-w-5xl rounded-xl lg:mt-2 mt-20 mb-20 p-4 bg-white dark:bg-zinc-900 shadow-md shadow-gray-300 dark:shadow-black">
           <div className="flex-1 p-3 overflow-y-auto scroll flex flex-col" id="chatDisplay">
           {userMessage ? (
-            <div className="chat-message self-end bg-blue-500 text-white max-w-xl rounded-lg px-3 py-1.5 mb-6 text-sm scroll">
+            <div className="chat-message self-end bg-blue-500 text-white max-w-xl rounded-lg px-3 py-1.5 mb-6 2xl:text-lg xl:text-sm scroll">
                 {userMessage}
               </div>
             ) : <h1 className="text-white">Tanyakan apapun pada Hanif</h1>}
             {loading ? (
-              <div className="self-start bg-zinc-500 text-white rounded-lg px-3 py-1.5 text-sm max-w-xl 2xl:max-w-2xl w-full flex items-center justify-center">
+              <div className="self-start bg-zinc-500 text-white rounded-lg px-3 py-1.5 2xl:text-lg xl:text-sm max-w-xl 2xl:max-w-2xl w-full flex items-center justify-center">
                 <div className="custom-loader mr-2"></div>
                 Loading...
               </div>
@@ -55,7 +55,7 @@ function App() {
             <div className="flex gap-4 w-full 2xl:px-[32rem] xl:px-[14rem] lg:px-[7rem]">
               <textarea
                 placeholder="Kirim pesan ke hanif..."
-                className="flex-1 p-3 w-full border 2xl:h-[4rem] xl:h-[3.5rem] h-[3.5rem] rounded-xl dark:bg-zinc-700 dark:text-white dark:border-zinc-600 text-lg"
+                className="flex-1 p-3 w-full 2xl:h-[4rem] xl:h-[3.5rem] h-[3.5rem] rounded-xl dark:bg-zinc-700 dark:text-white dark:border-zinc-600 text-lg"
                 id="content"
                 type="text"
               />
