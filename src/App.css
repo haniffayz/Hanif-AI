@@ -181,3 +181,67 @@ body::-webkit-scrollbar-thumb {
 .title {
   font-family: 'Squids';
 }
+
+.curved-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 24px; /* Sesuaikan dengan ukuran font yang Anda inginkan */
+  font-weight: bold; /* Sesuaikan dengan gaya font yang Anda inginkan */
+  white-space: nowrap;
+}
+
+.curve-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.curve-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f0f0f0; /* Sesuaikan dengan warna latar belakang yang Anda inginkan */
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/Image/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  mask-image: linear-gradient(
+    rgba(0,0,0,1) 85%,
+    rgba(0,0,0,0)
+  );
+  -webkit-mask-image: linear-gradient(
+    rgba(0,0,0,1) 85%,
+    rgba(0,0,0,0)
+  );
+}
