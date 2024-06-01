@@ -8,7 +8,7 @@ function Output({ responses, handleRefresh }) { // Menambahkan properti response
     return (
         <div>
             {responses.map((response, index) => (
-                <div key={index} className="flex flex-col py-4 p-6 lg:p-0">
+                <div key={index} className="flex flex-col py-4 p-6 md:p-8 lg:p-0">
                   <div className="chat-message self-end bg-blue-500 text-white max-w-xl rounded-lg px-3 py-1.5 mb-6 2xl:text-lg xl:text-sm scroll">
                     {response.user}
                   </div> 
