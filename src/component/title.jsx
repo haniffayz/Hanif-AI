@@ -11,7 +11,7 @@ function Title () {
             </div>
             <div className="z-20">
                <img src="/Image/logo.webp" alt="" className="2xl:w-[45rem] xl:w-[32rem]"/>
-               <h1 className="text-white text-2xl font-bold font-mono items-center text-center">Welcome To <a href="chathanif.vercel.app" className="underline italic">chathanif.vercel.app</a></h1>
+               <h1 className="text-white text-2xl font-bold font-mono items-center text-center px-4">Welcome To <a href="chathanif.vercel.app" className="underline italic">chathanif.vercel.app</a></h1>
             </div>
           </div>
             <div className="p-10">

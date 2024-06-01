@@ -59,8 +59,8 @@ function App() {
     <>
       <main className="bg-zinc-900">
         <div className="flex flex-col min-h-[100vh] justify-center items-center bg-white dark:bg-zinc-800 shadow-md overflow-hidden">
-          <div className="flex flex-col w-full max-w-3xl 2xl:max-w-5xl rounded-xl 2xl:mt-32 mt-20 mb-20 p-4 bg-white dark:bg-zinc-900 shadow-md shadow-gray-300 dark:shadow-black">
-            <div className="flex-1 p-3 overflow-y-auto scroll flex flex-col" id="chatDisplay">
+          <div className="flex flex-col w-full max-w-full lg:max-w-3xl 2xl:max-w-5xl rounded-xl 2xl:mt-32 mt-20 mb-20 lg:p-4 bg-white dark:bg-zinc-900 shadow-md shadow-gray-300 dark:shadow-black">
+            <div className="overflow-y-auto scroll flex flex-col" id="chatDisplay">
               {responses.length === 0 ? (
                 <Title/>
               ) : 
