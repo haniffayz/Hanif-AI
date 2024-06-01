@@ -66,7 +66,7 @@ function App() {
               ) : 
                 null
               }
-              <Output responses={responses} handleRefresh={handleRefresh} /> {/* Pass handleRefresh to Output */}
+              <Output responses={responses} handleRefresh={handleRefresh} loading={loading}/> {/* Pass handleRefresh to Output */}
              
             </div>
           </div>
