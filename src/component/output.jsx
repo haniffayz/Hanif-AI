@@ -2,8 +2,9 @@
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import PropTypes from "prop-types";
+import RefreshButton from "./resfreshButton";
 
-function Output({ responses }) { // Menambahkan properti responses
+function Output({ responses, handleRefresh }) { // Menambahkan properti responses
     return (
         <div>
             {responses.map((response, index) => (
@@ -19,7 +20,7 @@ function Output({ responses }) { // Menambahkan properti responses
                   >
                     {response.ai}
                   </SyntaxHighlighter>
-                  
+                  <RefreshButton handleRefresh={handleRefresh}/>
                 </div>
               ))}
         </div>
@@ -28,7 +29,9 @@ function Output({ responses }) { // Menambahkan properti responses
 }
 
 Output.propTypes = {
-    responses: PropTypes.bool.isRequired
+    responses: PropTypes.bool.isRequired,
+    handleRefresh: PropTypes.isRequired
+
 }
 
 export default Output;

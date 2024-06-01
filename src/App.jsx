@@ -1,4 +1,3 @@
-// App.jsx
 import "./App.css";
 import { requestToHanif } from "./utilities/groq";
 import { useState } from "react";
@@ -11,6 +10,7 @@ function App() {
   const [responses, setResponses] = useState([]);
   const [loading, setLoading] = useState(false);
   const [content, setContent] = useState("");
+  const [lastUserMessage, setLastUserMessage] = useState(""); // Add state to store last user message
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,12 +26,30 @@ function App() {
     setLoading(true);
     const userMessage = content;
     setContent("");
+    setLastUserMessage(userMessage); // Store the user message
+
     try {
       const ai = await requestToHanif(userMessage);
       setResponses((prevResponses) => [...prevResponses, { user: userMessage, ai }]);
     } catch (error) {
       console.error("Error fetching response:", error);
       setResponses((prevResponses) => [...prevResponses, { user: userMessage, ai: "Error fetching response. Please try again." }]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRefresh = async () => {
+    if (!lastUserMessage.trim()) return;
+
+    setLoading(true);
+
+    try {
+      const ai = await requestToHanif(lastUserMessage);
+      setResponses((prevResponses) => [...prevResponses, { user: lastUserMessage, ai }]);
+    } catch (error) {
+      console.error("Error fetching response:", error);
+      setResponses((prevResponses) => [...prevResponses, { user: lastUserMessage, ai: "Error fetching response. Please try again." }]);
     } finally {
       setLoading(false);
     }
@@ -48,11 +66,11 @@ function App() {
               ) : 
                 null
               }
-              <Output responses={responses} /> {/* Perbaikan properti response menjadi responses */}
+              <Output responses={responses} handleRefresh={handleRefresh} /> {/* Pass handleRefresh to Output */}
              
             </div>
           </div>
-          <Input loading={loading} content={content} handleSubmit={handleSubmit} setContent={setContent} /> {/* Menambahkan properti content */}
+          <Input loading={loading} content={content} handleSubmit={handleSubmit} setContent={setContent} />
         </div>
       </main>
     </>

@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bytescale/upload-widget-react": "^4.19.0",
+    "@google-cloud/vision": "^4.3.0",
     "@phosphor-icons/react": "^2.1.5",
+    "axios": "^1.7.2",
     "groq-sdk": "^0.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
+    "react-webcam": "^7.2.0",
     "sweetalert2": "^11.11.0"
   },
   "devDependencies": {
