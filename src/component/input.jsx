@@ -11,7 +11,7 @@ function Input({ loading, content, handleSubmit, setContent }) {
         </div> */}
         <textarea
           placeholder="Kirim pesan ke hanif..."
-          className="flex-1 p-3 w-full 2xl:h-[4rem] xl:h-[3.5rem] h-[3.5rem] rounded-xl dark:bg-zinc-700 dark:text-white dark:border-zinc-600 
+          className="flex-1 p-3 w-full 2xl:h-[4rem] xl:h-[3.5rem] h-[3.5rem] rounded-xl bg-zinc-700 text-white border-zinc-600 
           text-lg"
           id="content"
           value={content}
