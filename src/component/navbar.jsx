@@ -6,7 +6,7 @@ function Navbar() {
             className="2xl:text-4xl xl:text-2xl md:text-2xl text-4xl font-semibold text-indigo-500 dark:text-indigo-500 py-4 xl:py-2 2xl:py-6 lg:px-2 flex items-center lg:justify-between title"
             href=""
           >
-            Hanif AI🍀
+            Hanif AI
           </a>
         </div>
       </nav>
