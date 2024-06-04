@@ -58,8 +58,8 @@ function App() {
   return (
     <>
       <main className="bg-zinc-900">
-        <div className="flex flex-col min-h-[100vh] justify-center items-center bg-white dark:bg-zinc-800 shadow-md overflow-hidden">
-          <div className="flex flex-col w-full max-w-3xl lg:max-w-3xl 2xl:max-w-5xl rounded-xl 2xl:mt-32 mt-24 mb-20 lg:p-4 bg-white dark:bg-zinc-900 shadow-md shadow-gray-300 dark:shadow-black">
+        <div className="flex flex-col min-h-[100vh] justify-center items-center bg-zinc-800 shadow-md overflow-hidden">
+          <div className="flex flex-col w-full max-w-3xl lg:max-w-3xl 2xl:max-w-5xl rounded-xl 2xl:mt-32 mt-24 mb-20 lg:p-4 bg-zinc-900 shadow-md shadow-gray-300">
             <div className="overflow-y-auto scroll flex flex-col" id="chatDisplay">
               {responses.length === 0 ? (
                 <Title/>
